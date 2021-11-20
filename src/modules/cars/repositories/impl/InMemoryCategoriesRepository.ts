@@ -18,10 +18,22 @@ class InMemoryCategoriesRepository implements ICategoriesRepository {
     return InMemoryCategoriesRepository.INSTANCE;
   }
 
+  save(category: Category) {
+    const index = this.categories.findIndex(cat => cat.id === category.id);
+    if (index < 0) {
+      this.categories.push(category);
+    } else {
+      this.categories[index] = category;
+    }
+  }
+
   findAll(): Category[] {
     return this.categories;
   }
 
+  findByName(name: string): Category {
+    return this.categories.find(category => category.name === name);
+  }
 }
 
 export { InMemoryCategoriesRepository };
