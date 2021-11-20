@@ -48,6 +48,7 @@ This project was developed with the following technologies:
 - Install dependencies:  ```cd importer-csv-typescript yarn install```
 - Run application: ```yarn dev:serve```
 - Then the server will be running in http://localhost:3333.
+- You can view the documentation in http://localhost:3333/api-docs
 
 ## 🤔 How to contribute
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
